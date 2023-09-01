@@ -6,7 +6,7 @@ function generateSVG (data){  //takes in data and returns an SVG string based on
 
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">${data.text}</text>
 
-        </svg>`
+        </svg>`;
     }
 
     if (data.shape === "Square") {
@@ -14,7 +14,7 @@ function generateSVG (data){  //takes in data and returns an SVG string based on
 
         <rect width="150" height="150" fill="${data.color}" />
 
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">${data.text}</text>
+        <text x="75" y="125" font-size="60" text-anchor="middle" fill="white">${data.text}</text>
 
         </svg>`;
     }
@@ -22,13 +22,12 @@ function generateSVG (data){  //takes in data and returns an SVG string based on
     if (data.shape === "Triangle") {
     return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-    <polygon points="50,50 200,50 125,200"  fill="${data.color}" />
+    <polygon points="50,175 200,175 125,25"  fill="${data.color}" />
 
-    <text x="150" y="50" font-size="60" text-anchor="middle" fill="white">${data.text}</text>
+    <text x="125" y="150" font-size="60" text-anchor="middle" fill="white">${data.text}</text>
 
     </svg>`;
     }
-
 
     return false; //TODO: implement this function
 }
