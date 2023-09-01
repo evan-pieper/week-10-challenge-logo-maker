@@ -66,8 +66,7 @@ function writeToFile(fileName, data)  //takes in a file name and data, then writ
 
 function init() { // takes in the questions array, then uses inquirer to prompt the user for answers to the questions, then passes the answers to generateMarkdown.js, which returns the markdown, which is then passed to writeToFile
     inquirer.prompt(questions).then((data) => {
-        //data.license = getLicense(data.license);
-        writeToFile("./MdGenerator_output/README.md", data);
+        writeToFile("./SVG_generator_output/logo.svg", data);
     });
 }
 
