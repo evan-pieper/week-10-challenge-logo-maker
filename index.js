@@ -27,13 +27,16 @@ const questions = [
 
     {
         type: 'input',
-        name: 'title',
+        name: 'color',
         message: 'What color would you like your logo to be?',
         validate: function (input) {
             if(input.length < 1) {
                 return 'Please enter a color.';
             }
-            return true;
+            if(CSS.supports('color', input)) {
+                return true;
+            }
+            return 'Please enter a valid color.';
         },
     },
 
